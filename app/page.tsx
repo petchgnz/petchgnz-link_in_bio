@@ -11,8 +11,9 @@ import { motion } from 'motion/react';
 const links = [
   {
     title: 'Portfolio',
-    description: 'Still in progress',
-    href: 'https://example.com/portfolio',
+    description: '[Still in progress]',
+    // href: 'https://example.com/portfolio',
+    href: '#',
     icon: Briefcase,
   },
   {
@@ -40,11 +41,15 @@ export default function Home() {
 
       <div className='relative mx-auto flex max-w-md flex-col items-center gap-8'>
         <div className='grid grid-cols-3'>
-          <div className=""></div>
-          <div>
-            <StatusBadge />
-          </div>
-          <ThemeToggle />
+          <div className=''></div>
+          <StatusBadge />
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+          >
+            <ThemeToggle />
+          </motion.div>
         </div>
 
         <ProfileHeader

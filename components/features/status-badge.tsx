@@ -3,8 +3,8 @@ import { motion } from 'motion/react';
 function StatusBadge() {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 1 }}
       transition={{ duration: 0.5, delay: 0.15 }}
       className='inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5'
     >
