@@ -4,9 +4,7 @@ import { Button } from '../ui/button';
 import { useTheme } from 'next-themes';
 import { Moon, SunMedium } from 'lucide-react';
 
-type Props = {};
-
-function ThemeToggle({}: Props) {
+function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
@@ -14,8 +12,8 @@ function ThemeToggle({}: Props) {
   }
 
   return (
-    <div>
-      <Button onClick={toggleTheme}>
+    <div className='flex justify-end'>
+      <Button onClick={toggleTheme} variant={'outline'} className='cursor-pointer'>
         {theme === "dark" ? <SunMedium /> : <Moon />}
       </Button>
     </div>
