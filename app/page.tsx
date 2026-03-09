@@ -17,7 +17,7 @@ const links = [
     icon: Briefcase,
   },
   {
-    title: 'Open Source',
+    title: 'GitHub',
     description: 'Check out my GitHub repositories',
     href: 'https://github.com/petchgnz',
     icon: Code2,
