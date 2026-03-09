@@ -16,7 +16,7 @@ function ProfileHeader({ name, bio, handle, avatarUrl }: ProfileHeaderProps) {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.25, 1] }}
           className='flex flex-col items-center text-center'
         >
           <Avatar className='size-28 ring-2 ring-primary/20 ring-offset-4 ring-offset-background'>
@@ -36,9 +36,34 @@ function ProfileHeader({ name, bio, handle, avatarUrl }: ProfileHeaderProps) {
         </motion.div>
       </div>
 
-      <motion.h1>
-
+      <motion.h1
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.35 }}
+        className='text-2xl font-bold tracking-tight-tight text-foreground'
+      >
+        {name}
       </motion.h1>
+
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.45 }}
+        className='mt-1 font-mono text-sm text-muted-foreground'
+      >
+        @{handle}
+      </motion.p>
+
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.55 }}
+        className='mt-4 max-w-xs text-pretty text-sm leading-relaxed text-muted-foreground'
+      >
+        {bio}
+      </motion.p>
+
+
     </motion.div>
   );
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import ProfileHeader from '@/components/features/profile-header';
+import SocialLinks from '@/components/features/social-links';
 import StatusBadge from '@/components/features/status-badge';
 
 export default function Home() {
@@ -17,10 +18,13 @@ export default function Home() {
 
         <ProfileHeader
           name={'Phummarin Rojanamarn'}
-          bio={'Description'}
+          bio={'Web Developer working with ASP.NET on enterprise and government projects, with a strong interest in React, Next.js, and Node.js.'}
           handle={'petchgnz'}
           avatarUrl='/img/miniPic.JPG'
         />
+
+        <SocialLinks />
+
       </div>
     </main>
   );
