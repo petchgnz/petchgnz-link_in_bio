@@ -5,7 +5,7 @@ import ProfileHeader from '@/components/features/profile-header';
 import SocialLinks from '@/components/features/social-links';
 import StatusBadge from '@/components/features/status-badge';
 import ThemeToggle from '@/components/theme/ThemeToggle';
-import { Briefcase, Code2, Mail } from 'lucide-react';
+import { Briefcase, Github, Mail } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const links = [
@@ -20,7 +20,7 @@ const links = [
     title: 'GitHub',
     description: 'Check out my GitHub repositories',
     href: 'https://github.com/petchgnz',
-    icon: Code2,
+    icon: Github,
   },
   {
     title: 'Contact',
