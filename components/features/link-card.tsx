@@ -31,8 +31,6 @@ const LinkCard = ({
         }}
         whileHover={{
           scale: 1.02,
-          backgroundColor:
-            'var(--secondary-hover-color, rgba(var(--secondary), 0.5))',
         }}
         whileTap={{ scale: 0.98 }}
         className='group relative flex items-center gap-4 rounded-xl border border-border bg-card p-4 hover:border-primary/40'
