@@ -5,8 +5,18 @@ import ProfileHeader from '@/components/features/profile-header';
 import SocialLinks from '@/components/features/social-links';
 import StatusBadge from '@/components/features/status-badge';
 import ThemeToggle from '@/components/theme/ThemeToggle';
-import { Briefcase, Github, Mail } from 'lucide-react';
+import { Separator } from '@/components/ui/separator';
+import { Briefcase, Github, Mail, MessageCircle } from 'lucide-react';
 import { motion } from 'motion/react';
+
+const exampleProjects = [
+  {
+    title: 'Chat Application with MERN stack',
+    description: "I've learn about WebSocket and Cloudinary from this project",
+    href: 'https://petchgnz-chat-app-mern.onrender.com/',
+    icon: MessageCircle
+  }
+]
 
 const links = [
   {
@@ -64,16 +74,31 @@ export default function Home() {
         <SocialLinks />
 
         <div className='mt-4 flex flex-col w-full gap-5'>
-          {links.map((link, index) => (
-            <LinkCard
-              key={link.title}
-              title={link.title}
-              description={link.description}
-              href={link.href}
-              icon={link.icon}
-              index={index}
-            ></LinkCard>
-          ))}
+
+          <h1 className='text-2xl font-mono font-bold text-center'>Projects</h1>
+          <div className='flex flex-col w-full gap-5'>
+            {exampleProjects.map((link, index) => (
+              <LinkCard
+                key={link.title}
+                index={index}
+                {...link}
+              ></LinkCard>
+            ))}
+          </div>
+
+          <Separator className='my-5 w-1/2 mx-auto' />
+
+          <h1 className='text-2xl font-mono font-bold text-center'>Links</h1>
+          <div className='flex flex-col w-full gap-5'>
+            {links.map((link, index) => (
+              <LinkCard
+                key={link.title}
+                index={index}
+                {...link}
+              ></LinkCard>
+            ))}
+          </div>
+
         </div>
 
         <footer className='mt-8 text-center'>
