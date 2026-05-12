@@ -14,9 +14,9 @@ const exampleProjects = [
     title: 'Chat Application with MERN stack',
     description: "I've learn about WebSocket and Cloudinary from this project",
     href: 'https://petchgnz-chat-app-mern.onrender.com/',
-    icon: MessageCircle
-  }
-]
+    icon: MessageCircle,
+  },
+];
 
 const links = [
   {
@@ -44,15 +44,15 @@ const contacts = [
     title: 'Email',
     description: 'phetchgnz@gmail.com',
     href: 'mailto:phetchgnz@gmail.com',
-    icon: Mail
+    icon: Mail,
   },
   {
     title: 'Telephone',
     description: '094-353-8855',
     href: '#',
-    icon: Phone
-  }
-]
+    icon: Phone,
+  },
+];
 
 export default function Home() {
   return (
@@ -79,7 +79,7 @@ export default function Home() {
         <ProfileHeader
           name={'Phummarin Rojanamarn'}
           bio={
-            'Web Developer working with ASP.NET on enterprise and government projects, with a strong interest in React, Next.js, and Node.js.'
+            'Developer with experience in ASP.NET C# exterprise and government projects. Specialized in Next.js and currently expanding into full-stack development with Nest.js, Team-oriented and open to new opportunities.'
           }
           handle={'petchgnz'}
           avatarUrl='/img/miniPic.JPG'
@@ -88,7 +88,6 @@ export default function Home() {
         <SocialLinks />
 
         <div className='mt-4 flex flex-col w-full gap-5'>
-
           <h1 className='text-2xl font-mono font-bold text-center'>Projects</h1>
           <div className='flex flex-col w-full gap-5'>
             {exampleProjects.map((link, index) => (
