@@ -6,7 +6,7 @@ import SocialLinks from '@/components/features/social-links';
 import StatusBadge from '@/components/features/status-badge';
 import ThemeToggle from '@/components/theme/ThemeToggle';
 import { Separator } from '@/components/ui/separator';
-import { Briefcase, Github, Mail, MessageCircle } from 'lucide-react';
+import { Briefcase, Github, Mail, MessageCircle, Phone } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const exampleProjects = [
@@ -21,9 +21,8 @@ const exampleProjects = [
 const links = [
   {
     title: 'Portfolio',
-    description: '[Still in progress]',
-    // href: 'https://example.com/portfolio',
-    href: '#',
+    description: '[GitHub - Still in progress]',
+    href: 'https://github.com/petchgnz/petchgnz-portfolio',
     icon: Briefcase,
   },
   {
@@ -32,13 +31,28 @@ const links = [
     href: 'https://github.com/petchgnz',
     icon: Github,
   },
-  {
-    title: 'Contact',
-    description: 'Get in touch for collaborations',
-    href: 'mailto:phetchgnz@gmail.com',
-    icon: Mail,
-  },
+  // {
+  //   title: 'Contact',
+  //   description: 'Get in touch for collaborations',
+  //   href: 'mailto:phetchgnz@gmail.com',
+  //   icon: Mail,
+  // },
 ];
+
+const contacts = [
+  {
+    title: 'Email',
+    description: 'phetchgnz@gmail.com',
+    href: 'mailto:phetchgnz@gmail.com',
+    icon: Mail
+  },
+  {
+    title: 'Telephone',
+    description: '094-353-8855',
+    href: '#',
+    icon: Phone
+  }
+]
 
 export default function Home() {
   return (
@@ -99,6 +113,18 @@ export default function Home() {
             ))}
           </div>
 
+          <Separator className='my-5 w-1/2 mx-auto' />
+
+          <h1 className='text-2xl font-mono font-bold text-center'>Contacts</h1>
+          <div className='flex flex-col w-full gap-5'>
+            {contacts.map((link, index) => (
+              <LinkCard
+                key={link.title}
+                index={index}
+                {...link}
+              ></LinkCard>
+            ))}
+          </div>
         </div>
 
         <footer className='mt-8 text-center'>
