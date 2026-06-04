@@ -6,15 +6,23 @@ import SocialLinks from '@/components/features/social-links';
 import StatusBadge from '@/components/features/status-badge';
 import ThemeToggle from '@/components/theme/ThemeToggle';
 import { Separator } from '@/components/ui/separator';
-import { Briefcase, Github, LayoutDashboard, Mail, MessageCircle } from 'lucide-react';
+import {
+  Briefcase,
+  Github,
+  LayoutDashboard,
+  Mail,
+  MessageCircle,
+  Phone,
+} from 'lucide-react';
 import { motion } from 'motion/react';
 
 const exampleProjects = [
   {
     title: 'Personal Portfolio CMS',
-    description: 'Personal portfolio CMS built with Next.js, NestJS, and PostgreSQL.',
+    description:
+      'Personal portfolio CMS built with Next.js, NestJS, and PostgreSQL.',
     href: 'https://petchgnz-portfolio.vercel.app/',
-    icon: LayoutDashboard
+    icon: LayoutDashboard,
   },
   {
     title: 'Chat Application with MERN stack',
@@ -27,7 +35,8 @@ const exampleProjects = [
 const links = [
   {
     title: 'Portfolio',
-    description: 'A collection of my projects, technical skills, and professional experiecnes',
+    description:
+      'A collection of my projects, technical skills, and professional experiecnes',
     href: 'https://petchgnz-portfolio.vercel.app/',
     // href: '#',
     icon: Briefcase,
@@ -38,9 +47,12 @@ const links = [
     href: 'https://github.com/petchgnz',
     icon: Github,
   },
+];
+
+const contacts = [
   {
-    title: 'Contact',
-    description: 'Get in touch for collaborations (email)',
+    title: 'Email',
+    description: 'phetchgnz@gmail.com',
     href: 'mailto:phetchgnz@gmail.com',
     icon: Mail,
   },
