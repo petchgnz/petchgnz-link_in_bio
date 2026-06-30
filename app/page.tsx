@@ -7,6 +7,7 @@ import StatusBadge from '@/components/features/status-badge';
 import ThemeToggle from '@/components/theme/ThemeToggle';
 import { Separator } from '@/components/ui/separator';
 import {
+  Book,
   Briefcase,
   Github,
   LayoutDashboard,
@@ -23,6 +24,12 @@ const exampleProjects = [
       'Personal portfolio CMS built with Next.js, NestJS, and PostgreSQL.',
     href: 'https://petchgnz-portfolio.vercel.app/',
     icon: LayoutDashboard,
+  },
+  {
+    title: 'Blog Management Website',
+    description: 'A full-stack blog platform built as an application assignment using Next.js, NestJS, and PostgreSQL. Includes a public reader interface and a secure admin dashboard for full content moderation.',
+    href: 'https://metier-assignment.vercel.app/blogs',
+    icon: Book,
   },
   {
     title: 'Chat Application with MERN stack',
@@ -89,7 +96,7 @@ export default function Home() {
         <ProfileHeader
           name={'Phummarin Rojanamarn'}
           bio={
-            'Developer with experience in ASP.NET C# exterprise and government projects. Specialized in Next.js and currently expanding into full-stack development with Nest.js, Team-oriented and open to new opportunities.'
+            'Developer with experience in ASP.NET C# enterprise and government projects. Specialized in Next.js and currently expanding into full-stack development with Nest.js, Team-oriented and open to new opportunities.'
           }
           handle={'petchgnz'}
           avatarUrl='/img/miniPic.JPG'
